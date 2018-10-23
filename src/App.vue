@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Navbar />
     <transition name="intro">
       <div class="intro" v-if="!show">
         <div class="loader">
@@ -16,8 +17,12 @@
 </template>
 
 <script>
+import Navbar from './components/Navbar'
 
 export default {
+  components: {
+    Navbar
+  },
   data () {
     return {
       show: false
